@@ -1,0 +1,6 @@
+[package]
+name = "e_am_i_prime"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

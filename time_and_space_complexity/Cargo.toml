@@ -1,0 +1,20 @@
+[workspace]
+members = [
+    "1_natural_sum",
+    "2_interval_sum",
+    "c_counting_intervals",
+    "d_count_factors",
+    "e_am_i_prime",
+    "f_count_primes",
+    "g_print_factors",
+    "h_kth_factor",
+]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+[workspace.dependencies]
+
+# https://codeforces.com/group/DNruwPkRNA/contest/725607 + /problem/A(/B/C)

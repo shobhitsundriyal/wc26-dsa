@@ -1,0 +1,6 @@
+[package]
+name = "g_sum_of_all_subarrays_hard"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

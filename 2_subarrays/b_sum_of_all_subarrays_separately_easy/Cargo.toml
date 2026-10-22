@@ -1,0 +1,6 @@
+[package]
+name = "b_sum_of_all_subarrays_separately_easy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

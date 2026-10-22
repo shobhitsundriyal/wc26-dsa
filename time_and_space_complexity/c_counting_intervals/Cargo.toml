@@ -1,0 +1,6 @@
+[package]
+name = "counting_intervals"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

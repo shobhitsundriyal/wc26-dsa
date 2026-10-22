@@ -1,0 +1,6 @@
+[package]
+name = "d_maximum_of_all_subarrays"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

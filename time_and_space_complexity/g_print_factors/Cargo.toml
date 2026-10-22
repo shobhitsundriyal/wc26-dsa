@@ -1,0 +1,6 @@
+[package]
+name = "g_print_factors"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

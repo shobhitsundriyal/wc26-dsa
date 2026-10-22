@@ -1,0 +1,6 @@
+[package]
+name = "f_count_primes"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

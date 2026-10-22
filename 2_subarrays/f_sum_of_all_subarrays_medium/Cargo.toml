@@ -1,0 +1,6 @@
+[package]
+name = "f_sum_of_all_subarrays_medium"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

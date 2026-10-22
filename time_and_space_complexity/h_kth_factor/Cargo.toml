@@ -1,0 +1,6 @@
+[package]
+name = "h_kth_factor"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

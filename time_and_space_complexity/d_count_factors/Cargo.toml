@@ -1,0 +1,6 @@
+[package]
+name = "d_count_factors"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

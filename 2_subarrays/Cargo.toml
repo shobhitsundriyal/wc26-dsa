@@ -1,0 +1,14 @@
+# Contest: Subarrays (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/726083
+
+[workspace]
+resolver = "2"
+members = [
+    "a_print_all_subarrays",
+    "b_sum_of_all_subarrays_separately_easy",
+    "c_sum_of_all_subarrays_separately_hard",
+    "d_maximum_of_all_subarrays",
+    "e_sum_of_all_subarrays_easy",
+    "f_sum_of_all_subarrays_medium",
+    "g_sum_of_all_subarrays_hard",
+]

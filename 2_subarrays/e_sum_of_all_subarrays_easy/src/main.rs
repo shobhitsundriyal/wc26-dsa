@@ -41,5 +41,23 @@ fn main() {
         );
     }
 
+    // brute n^3
+    let mut i = 0;
+    let mut final_sum=0;
+    while i<=n {
+        let mut j = i;
+        while j<n {
+            let mut k = i;
+            let mut sum = 0;
+            while k<=j {
+                sum += a[k];
+                k+=1;
+            }
+            final_sum += sum;
+            j+=1;
+        }    
+        i+=1;
+    }
+    println!("{final_sum}");
     
 }

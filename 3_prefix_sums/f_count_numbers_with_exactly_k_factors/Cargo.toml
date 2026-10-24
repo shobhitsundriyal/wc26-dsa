@@ -1,0 +1,6 @@
+[package]
+name = "f_count_numbers_with_exactly_k_factors"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

@@ -1,0 +1,14 @@
+# Contest: Prefix Sums (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/726133
+
+[workspace]
+resolver = "2"
+members = [
+    "a_range_sum_query",
+    "b_even_sum_query",
+    "c_count_vowels",
+    "d_range_sum_of_squares",
+    "e_count_numbers_with_digit_sum_k",
+    "f_count_numbers_with_exactly_k_factors",
+    "g_alternating_range_sum",
+]

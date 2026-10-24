@@ -1,0 +1,6 @@
+[package]
+name = "e_count_numbers_with_digit_sum_k"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

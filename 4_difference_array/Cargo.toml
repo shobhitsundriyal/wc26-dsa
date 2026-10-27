@@ -1,0 +1,10 @@
+# Contest: Difference Array (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/726822
+
+[workspace]
+resolver = "2"
+members = [
+    "a_array_manipulation",
+    "b_array_manipulation_ii",
+    "c_toggle_binary_array",
+]

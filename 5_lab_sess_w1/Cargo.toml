@@ -1,0 +1,15 @@
+# Contest: Lab Session (Week 1) (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/726841
+
+[workspace]
+resolver = "2"
+members = [
+    "a_is_everyone_same",
+    "b_is_it_sorted",
+    "c_count_adjacent_equal_elements",
+    "d_count_local_maximas",
+    "e_equilibrium_point",
+    "f_split_an_array_into_two_equal_sum_subarrays",
+    "g_special_indices",
+    "h_product_of_array_except_self",
+]

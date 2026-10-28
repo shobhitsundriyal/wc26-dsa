@@ -1,0 +1,13 @@
+# Contest: Weekly Contest I (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/727638
+
+[workspace]
+resolver = "2"
+members = [
+    "a_perfect_or_not",
+    "b_matching_ends_i",
+    "c_balanced_string_queries",
+    "d_street_lights",
+    "e_count_critical_points",
+    "f_matching_ends_ii",
+]

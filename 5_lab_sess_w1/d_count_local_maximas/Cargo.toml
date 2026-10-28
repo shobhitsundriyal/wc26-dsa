@@ -1,0 +1,6 @@
+[package]
+name = "d_count_local_maximas"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

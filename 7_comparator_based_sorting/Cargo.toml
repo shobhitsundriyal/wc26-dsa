@@ -1,0 +1,17 @@
+# Contest: Comparator based sorting (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/727651
+
+[workspace]
+resolver = "2"
+members = [
+    "a_sort_in_descending_order",
+    "b_sort_by_length",
+    "c_sort_by_magnitude",
+    "d_sort_by_last_digit",
+    "e_sort_students",
+    "f_sort_points",
+    "g_sort_flights",
+    "h_sort_stocks",
+    "i_sort_amazon_orders",
+    "j_closest_points",
+]

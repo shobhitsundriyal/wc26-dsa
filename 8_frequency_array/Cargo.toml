@@ -1,0 +1,19 @@
+# Contest: Frequency Array (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/728252
+
+[workspace]
+resolver = "2"
+members = [
+    "a_character_frequency",
+    "b_digit_frequency",
+    "c_check_anagram",
+    "d_string_duplicates",
+    "e_array_duplicates",
+    "f_count_occurences",
+    "g_first_non_repeating_character",
+    "h_unique_queries",
+    "i_element_queries",
+    "j_frequency_queries",
+    "k_atleast_twice_queries",
+    "l_odd_occurence_queries",
+]

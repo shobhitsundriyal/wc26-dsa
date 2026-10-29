@@ -1,0 +1,6 @@
+[package]
+name = "g_first_non_repeating_character"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

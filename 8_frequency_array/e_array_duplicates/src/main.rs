@@ -5,20 +5,43 @@
 //   Line 1: n (1 <= n <= 1e6)
 //   Line 2: n integers a1 .. an (1 <= ai <= 1e5)
 
-use std::io::{self, Read};
+use std::io::{self, BufRead};
 
 fn main() {
-    let mut input = String::new();
-    io::stdin().read_to_string(&mut input).unwrap();
-    let mut tokens = input.split_whitespace();
+    let stdin = io::stdin();
+    let mut lines = stdin.lock().lines();
 
-    let n: usize = tokens.next().unwrap().parse().unwrap();
+    let n: usize = lines.next().unwrap().unwrap().trim().parse().unwrap();
 
-    let a: Vec<usize> = (0..n)
-        .map(|_| tokens.next().unwrap().parse().unwrap())
-        .collect();
+    let mut a: Vec<usize> = Vec::with_capacity(n);
+    while a.len() < n {
+        let line = lines.next().unwrap().unwrap();
+        for tok in line.split_whitespace() {
+            a.push(tok.parse().unwrap());
+        }
+    }
 
-    let _ = &a;
+    a.sort();
+    a.push(a[n - 1] + 1);
 
-    // TODO: solve
+    let mut i = 1;
+    let mut pre = a[0];
+    let mut count = 1;
+    let mut flag = false;
+    while i <= n {
+        if pre != a[i] {
+            if count > 1 {
+                print!("{pre} ");
+                flag = true;
+            }
+            pre = a[i];
+            count = 1;
+        } else {
+            count += 1;
+        }
+        i+=1;
+    }
+    if !flag {
+        print!("-1")
+    }
 }

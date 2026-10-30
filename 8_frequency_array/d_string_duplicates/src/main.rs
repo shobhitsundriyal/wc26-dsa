@@ -4,16 +4,35 @@
 // Input
 //   Line 1: s (1 <= |s| <= 1e6), lowercase English letters
 
-use std::io::{self, Read};
+use std::{io::{self, BufRead}};
 
 fn main() {
+    let stdin = io::stdin();
+    let mut stdin = stdin.lock();
+
     let mut input = String::new();
-    io::stdin().read_to_string(&mut input).unwrap();
-    let mut tokens = input.split_whitespace();
+    stdin.read_line(&mut input).unwrap();
+    let s = input.trim();
 
-    let s: String = tokens.next().unwrap().to_string();
+    let mut freq = vec![0;26];
+    let a: u8 = 97;
+    for ch in s.chars() {
+        let ascii_ch = ch as u8;
+        freq[(ascii_ch - a) as usize] += 1;
+    }
 
-    let _ = &s;
+    let mut flag = false;
+    let mut i =0;
 
-    // TODO: solve
+    while i<26 {
+        if freq[i] > 1{
+            flag =true;
+            print!("{}", (a+i as u8) as char)
+        }
+        i+=1;
+    }
+
+    if !flag{
+        print!("-1");
+    }
 }

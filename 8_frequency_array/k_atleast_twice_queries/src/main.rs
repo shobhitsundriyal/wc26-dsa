@@ -9,25 +9,45 @@
 //     "3"    print how many distinct numbers appear at least twice
 //   (1 <= x <= 1e5)
 
-use std::io::{self, Read};
+use std::io::{self, BufRead};
 
 fn main() {
-    let mut input = String::new();
-    io::stdin().read_to_string(&mut input).unwrap();
-    let mut tokens = input.split_whitespace();
+    let stdin = io::stdin();
+    let mut lines = stdin.lock().lines();
 
-    let q: usize = tokens.next().unwrap().parse().unwrap();
+    let q: usize = lines.next().unwrap().unwrap().trim().parse().unwrap();
+
+    let mut freq = [0;100001];
+    let mut ans: Vec<u32> = vec![];
+    let mut count = 0;
 
     for _ in 0..q {
+        let line = lines.next().unwrap().unwrap();
+        let mut tokens = line.split_whitespace();
+
         let kind: u8 = tokens.next().unwrap().parse().unwrap();
 
-        if kind == 3 {
-            // TODO: print the number of distinct values occurring at least twice
-        } else {
-            let x: usize = tokens.next().unwrap().parse().unwrap();
-            let _ = x;
-
-            // TODO: add / remove x
+        match kind {
+            1 | 2 => {
+                let x: usize = tokens.next().unwrap().parse().unwrap();
+                if kind ==1 {
+                    freq[x] += 1;
+                    if freq[x] == 2 {
+                        count += 1;
+                    }
+                } else {
+                    if freq[x] == 2 {
+                        count -= 1;
+                    }
+                    freq[x] -= if freq[x]==0 {0} else {1};
+                }
+            }
+            3 => {
+                // let x: usize = tokens.next().unwrap().parse().unwrap();
+                ans.push(count);
+            }
+            _ => unreachable!("unknown query type: {kind}"),
         }
     }
+    ans.iter().for_each(|e| println!("{e}"));
 }

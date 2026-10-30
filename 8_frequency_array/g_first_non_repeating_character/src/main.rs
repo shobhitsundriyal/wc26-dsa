@@ -4,16 +4,26 @@
 // Input
 //   Line 1: s (1 <= |s| <= 1e5), lowercase English letters
 
-use std::io::{self, Read};
+use std::io::{self, BufRead};
 
 fn main() {
     let mut input = String::new();
-    io::stdin().read_to_string(&mut input).unwrap();
-    let mut tokens = input.split_whitespace();
+    io::stdin().lock().read_line(&mut input).unwrap();
 
-    let s: String = tokens.next().unwrap().to_string();
+    let s = input.trim();
 
-    let _ = &s;
+    let mut freq = [0;26];
 
-    // TODO: solve
+    for ch in s.chars(){
+        freq[(ch as u8 - 97) as usize] += 1; 
+    }
+
+    let mut ans = String::from("-1");
+    for ch in s.chars() {
+        if freq[(ch as u8 - 97) as usize] == 1 {
+            ans = ch.to_string();
+            break;
+        }
+    }
+    println!("{ans}");
 }

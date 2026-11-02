@@ -1,0 +1,14 @@
+# Contest: Sliding Window (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/698784
+
+[workspace]
+resolver = "2"
+members = [
+    "a_max_subarray_sum_of_size_k",
+    "b_count_vowels",
+    "c_count_good_numbers",
+    "d_count_number_of_distinct_integers",
+    "e_subarray_with_most_primes",
+    "f_count_good_numbers",
+    "g_count_number_of_distinct_integers",
+]

@@ -1,0 +1,20 @@
+# Contest: Sets and Maps (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/729216
+
+[workspace]
+resolver = "2"
+members = [
+    "a_element_queries",
+    "b_search_queries_iii",
+    "c_count_distinct",
+    "d_count_distinct_queries",
+    "e_count_distinct_queries_ii",
+    "f_two_sum_i",
+    "g_two_sum_ii",
+    "h_two_sum_iii",
+    "i_og_pairs",
+    "j_union_of_two_arrays",
+    "k_intersection_of_two_arrays",
+    "l_intersection_of_two_arrays_ii",
+    "m_group_anagrams",
+]

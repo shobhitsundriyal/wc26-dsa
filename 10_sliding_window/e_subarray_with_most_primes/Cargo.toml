@@ -1,0 +1,6 @@
+[package]
+name = "e_subarray_with_most_primes"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

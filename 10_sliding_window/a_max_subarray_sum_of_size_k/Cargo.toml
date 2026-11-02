@@ -1,0 +1,6 @@
+[package]
+name = "a_max_subarray_sum_of_size_k"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

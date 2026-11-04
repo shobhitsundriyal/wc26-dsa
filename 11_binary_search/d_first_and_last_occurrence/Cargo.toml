@@ -1,0 +1,6 @@
+[package]
+name = "d_first_and_last_occurrence"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

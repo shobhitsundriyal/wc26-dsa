@@ -1,0 +1,6 @@
+[package]
+name = "j_frequency_of_element_ge_x"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

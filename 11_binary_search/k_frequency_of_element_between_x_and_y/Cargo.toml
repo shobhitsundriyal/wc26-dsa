@@ -1,0 +1,6 @@
+[package]
+name = "k_frequency_of_element_between_x_and_y"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

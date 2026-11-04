@@ -1,0 +1,18 @@
+# Contest: Binary Search (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/729595
+
+[workspace]
+resolver = "2"
+members = [
+    "a_search_queries",
+    "b_search_queries_ii",
+    "c_binary_search_strings",
+    "d_first_and_last_occurrence",
+    "e_frequency_of_element",
+    "f_first_true",
+    "g_last_true",
+    "h_smallest_element_ge_x",
+    "i_largest_element_le_x",
+    "j_frequency_of_element_ge_x",
+    "k_frequency_of_element_between_x_and_y",
+]

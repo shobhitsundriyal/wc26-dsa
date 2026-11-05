@@ -1,0 +1,14 @@
+# Contest: Binary Search on Answer Space (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/730116
+
+[workspace]
+resolver = "2"
+members = [
+    "a_integer_square_root",
+    "b_ship_packages_within_d_days",
+    "c_koko_eating_bananas",
+    "d_painters_partition",
+    "e_building_an_aquarium",
+    "f_allocate_minimum_pages",
+    "g_aggressive_cows",
+]

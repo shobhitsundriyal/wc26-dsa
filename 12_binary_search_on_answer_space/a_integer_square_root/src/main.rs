@@ -12,9 +12,20 @@ fn main() {
 
     // Line 1: n
     let first = lines.next().expect("missing first line").unwrap();
-    let n: u64 = first.trim().parse().unwrap();
+    let n: u128 = first.trim().parse().unwrap();
 
-    let _ = n;
+    let mut l: u128 =0;
+    let mut r: u128 = n;
+    let mut ans: u128 = 0;
+    while l<=r {
+        let mid = (l+r)/2;
+        if mid * mid <= n {
+            ans = mid;
+            l = mid +1;
+        } else {
+            r = mid-1;
+        }
+    }
 
-    // TODO: solve
+    println!("{ans}");
 }

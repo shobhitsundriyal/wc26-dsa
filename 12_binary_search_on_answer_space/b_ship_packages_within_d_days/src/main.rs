@@ -4,8 +4,27 @@
 // Input
 //   Line 1: n d (1 <= n <= 2e5, 1 <= d <= n)
 //   Line 2: n integers w1 .. wn (1 <= wi <= 1e9)
-
+ 
 use std::io::{self, BufRead};
+
+fn is_possible(arr: &[u64], capacity: u64, days_allowed: usize) -> bool {
+    let mut days = 1;
+    let mut cap = arr[0];
+
+    let mut i =1;
+    let n = arr.len();
+    while i<n {
+        if cap + arr[i] <= capacity {
+            cap += arr[i];
+        } else {
+            cap = arr[i];
+            days += 1;
+        }
+        i+=1;
+    }
+
+    days <= days_allowed
+}
 
 fn main() {
     let stdin = io::stdin();
@@ -28,7 +47,19 @@ fn main() {
         );
     }
 
-    let _ = (&w, d);
+    let mut l = *w.iter().max().unwrap();
+    let mut r: u64 = w.iter().sum();
 
-    // TODO: solve
+    let mut ans = r;
+    while l<=r {
+        let mid = (l+r)/2;
+        if is_possible(&w,mid, d) {
+            r = mid -1;
+            ans = mid;
+        } else {
+            l = mid +1;
+        }
+    }
+
+    println!("{ans}");
 }

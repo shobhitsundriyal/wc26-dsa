@@ -7,6 +7,28 @@
 
 use std::io::{self, BufRead};
 
+fn is_possible(arr: &[u64], check_rate: u64, hours_allowed: u64) -> bool {
+    let mut hr_taken = 0;
+
+    for pile in arr {
+        // if *pile <= check_rate {
+        //     hr_taken += 1;
+        // } else {
+        //     let rem = pile % check_rate;
+        //     let div = pile / check_rate;
+        //     hr_taken += if rem == 0 {div} else {div+1};
+        // }
+        //or better way
+        if pile % check_rate == 0 {
+            hr_taken += pile/check_rate;
+        } else {
+            hr_taken += (pile/check_rate) + 1;
+        }
+    }
+
+    hr_taken <= hours_allowed
+}
+
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
@@ -28,7 +50,19 @@ fn main() {
         );
     }
 
-    let _ = (&a, h);
+    let mut l = 1;
+    let mut r = *a.iter().max().unwrap();
+    let mut ans = r;
 
-    // TODO: solve
+    while l<=r {
+        let mid = (l+r)/2;
+        if is_possible(&a,mid, h) {
+            r = mid -1;
+            ans = mid;
+        } else {
+            l = mid +1;
+        }
+    }
+
+    println!("{ans}");
 }

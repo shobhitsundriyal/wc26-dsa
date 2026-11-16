@@ -10,6 +10,14 @@
 
 use std::io::{self, BufRead};
 
+fn is_possible(arr: &[u64], n: usize, water_limit: u64, curr_height: u64) -> bool {
+    let mut curr_water = 0;
+    for item in arr.iter() {
+        curr_water += if curr_height > *item {curr_height - *item} else {0};
+    }
+    curr_water <= water_limit
+}
+
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
@@ -41,7 +49,23 @@ fn main() {
         test_cases.push((n, x, a));
     }
 
-    let _ = &test_cases;
+    test_cases.iter().for_each(|(n, x, arr)| {
+        let mut l=1;
+        let mut r = *arr.iter().min().unwrap() + *x;
+        let mut ans = 0;
+        while l<=r {
+            let mid = (l + r) /2;
+
+            if is_possible(arr, *n, *x, mid) {
+                l = mid+1;
+                ans = mid;
+            } else {
+                r = mid -1;
+            }
+        }
+
+        println!("{ans}");
+    });
 
     // TODO: solve
 }

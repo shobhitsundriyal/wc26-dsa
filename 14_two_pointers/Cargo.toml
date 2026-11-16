@@ -1,0 +1,13 @@
+# Contest: Two Pointers (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/732301
+
+[workspace]
+resolver = "2"
+members = [
+    "a_longest_subarray_with_sum_lt_k",
+    "b_longest_substring_without_repeating_characters",
+    "c_longest_substring_with_at_most_k_distinct_characters",
+    "d_count_subarrays_with_sum_lt_k",
+    "e_count_subarrays_with_at_most_k_distinct",
+    "f_smallest_subarray_with_sum_gt_k",
+]

@@ -1,0 +1,6 @@
+[package]
+name = "c_longest_substring_with_at_most_k_distinct_characters"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

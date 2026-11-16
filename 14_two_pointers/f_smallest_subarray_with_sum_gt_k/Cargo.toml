@@ -1,0 +1,6 @@
+[package]
+name = "f_smallest_subarray_with_sum_gt_k"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

@@ -1,0 +1,17 @@
+# Contest: Sieve and its variations (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/733064
+
+[workspace]
+resolver = "2"
+members = [
+    "a_factors_of_all_numbers",
+    "b_factor_count_queries",
+    "c_print_primes_from_1_to_n",
+    "d_prime_queries",
+    "e_good_number_queries",
+    "f_prime_range_queries",
+    "g_prime_factorisation",
+    "h_unique_prime_factors",
+    "i_prime_factorise_queries",
+    "j_almost_prime",
+]

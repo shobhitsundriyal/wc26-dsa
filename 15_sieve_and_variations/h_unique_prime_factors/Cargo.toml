@@ -1,0 +1,6 @@
+[package]
+name = "h_unique_prime_factors"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

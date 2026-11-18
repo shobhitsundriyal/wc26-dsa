@@ -1,5 +1,6 @@
 # Contest: Sieve and its variations (Winter Camp)
 # https://codeforces.com/group/DNruwPkRNA/contest/733064
+# some of them not exactly require factors array creation, plus think of bool array to dont have to check factors[i] == 2. creation of bool sieve is log(log N) faster than current N * sqrt(N)
 
 [workspace]
 resolver = "2"

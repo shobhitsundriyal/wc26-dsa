@@ -1,0 +1,6 @@
+[package]
+name = "h_sum_of_digits"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

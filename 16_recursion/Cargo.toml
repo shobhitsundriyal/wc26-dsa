@@ -1,0 +1,26 @@
+# Contest: Recursion (Winter Camp)
+# https://codeforces.com/group/DNruwPkRNA/contest/733421
+
+[workspace]
+resolver = "2"
+members = [
+    "a_print_decreasing",
+    "b_print_increasing",
+    "c_print_zig_zag",
+    "d_print_number_in_reverse",
+    "e_factorial",
+    "f_sum_of_first_n_natural_numbers",
+    "g_power",
+    "h_sum_of_digits",
+    "i_nth_fibonacci",
+    "j_print_array_reverse",
+    "k_print_array",
+    "l_minimum_element",
+    "m_maximum_element",
+    "n_sum_of_the_array",
+    "o_check_if_array_is_sorted",
+    "p_first_occurrence_of_x",
+    "q_last_occurrence_of_x",
+    "r_indices_of_x",
+    "s_tower_of_hanoi",
+]

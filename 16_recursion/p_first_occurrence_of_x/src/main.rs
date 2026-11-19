@@ -8,6 +8,17 @@
 
 use std::io::{self, BufRead};
 
+fn fo(a: &[i64], len: usize, n:usize, x: i64) -> i64 {
+    if n==len {
+        return  -2;
+    }
+    if a[n] == x {
+        n as i64
+    } else {
+        fo(a, len, n+1, x)
+    }
+}
+
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
@@ -35,7 +46,5 @@ fn main() {
         .parse()
         .unwrap();
 
-    let _ = (&a, x);
-
-    // TODO: solve
+    println!("{}", fo(&a, n, 0, x) + 1);
 }

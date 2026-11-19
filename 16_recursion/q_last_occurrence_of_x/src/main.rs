@@ -8,6 +8,17 @@
 
 use std::io::{self, BufRead};
 
+fn lo(a: &[i64], n:usize, x: i64) -> i64 {
+    if n==0 {
+        return  -1;
+    }
+    if a[n] == x {
+        n as i64
+    } else {
+        lo(a, n-1, x)
+    }
+}
+
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
@@ -17,8 +28,9 @@ fn main() {
     let n: usize = first.trim().parse().unwrap();
 
     // Line 2 (and any following lines, in case it wraps): the n values.
-    let mut a: Vec<i64> = Vec::with_capacity(n);
-    while a.len() < n {
+    let mut a: Vec<i64> = Vec::with_capacity(n+1);
+    a.push(0);
+    while a.len() < n+1 {
         let line = lines.next().expect("not enough array values").unwrap();
         a.extend(
             line.split_whitespace()
@@ -35,7 +47,6 @@ fn main() {
         .parse()
         .unwrap();
 
-    let _ = (&a, x);
+        println!("{}", lo(&a, n, x));
 
-    // TODO: solve
 }

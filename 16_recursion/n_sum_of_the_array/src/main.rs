@@ -7,6 +7,13 @@
 
 use std::io::{self, BufRead};
 
+fn sum_arr(a: &[i64], n: usize) -> i64 {
+    if n==0 {
+        return  0;
+    }
+    a[n] + sum_arr(a, n-1)
+}
+
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
@@ -17,7 +24,8 @@ fn main() {
 
     // Line 2 (and any following lines, in case it wraps): the n values.
     let mut a: Vec<i64> = Vec::with_capacity(n);
-    while a.len() < n {
+    a.push(0);
+    while a.len() < n+1 {
         let line = lines.next().expect("not enough array values").unwrap();
         a.extend(
             line.split_whitespace()
@@ -25,7 +33,5 @@ fn main() {
         );
     }
 
-    let _ = &a;
-
-    // TODO: solve
+    println!("{}",sum_arr(&a, n));
 }

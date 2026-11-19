@@ -6,6 +6,16 @@
 //   Line 2: n integers a1 .. an (-1e9 <= ai <= 1e9)
 
 use std::io::{self, BufRead};
+fn sorted(a: &[i64], n: usize) -> bool {
+    if n==0 {
+        return  true;
+    }
+    if a[n] == a[n-1] {
+        sorted(a, n-1)
+    } else {
+        false
+    }
+}
 
 fn main() {
     let stdin = io::stdin();
@@ -25,7 +35,9 @@ fn main() {
         );
     }
 
-    let _ = &a;
-
-    // TODO: solve
+    if sorted(&a, n-1) {
+        println!("YES");
+    } else {
+        println!("NO");
+    }
 }

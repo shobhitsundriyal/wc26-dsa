@@ -6,6 +6,15 @@
 
 use std::io::{self, BufRead};
 
+fn toi(n:usize, a:char, b: char, c: char) {
+    if n==0 {
+        return;
+    }
+    toi(n-1, a, c, b);
+    println!("Move {} to {}", a,c);
+    toi(n-1, b, a, c);
+}
+
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
@@ -14,7 +23,5 @@ fn main() {
     let first = lines.next().expect("missing first line").unwrap();
     let n: usize = first.trim().parse().unwrap();
 
-    let _ = n;
-
-    // TODO: solve
+    toi(n, 'A', 'B', 'C');
 }

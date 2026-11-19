@@ -8,6 +8,18 @@
 
 use std::io::{self, BufRead};
 
+fn pi(a: &[i64], len: usize, i:usize, x: i64, flag: bool) -> bool {
+    if i==len {
+        return  flag;
+    }
+    let mut local_flag= flag;
+    if a[i] == x {
+        print!("{} ", i+1);
+        local_flag = true;
+    }
+    pi(a, len, i+1, x, local_flag)
+}
+
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
@@ -35,7 +47,7 @@ fn main() {
         .parse()
         .unwrap();
 
-    let _ = (&a, x);
-
-    // TODO: solve
+    if !pi(&a, n, 0, x, false) {
+        print!("-1");
+    }
 }
